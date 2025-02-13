@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+<h1>Keywords</h1>
+<div class="row mb-3">
+    <div class="col-md-6">
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Actions</th>
+                <th>Id</th>
+                <th>Word</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-bs-offset="10,20">Действия</button>
+                        <div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/1">
+                                <i class="fas fa-eye"></i> Просмотр
+                            </a>
+                            <a class="dropdown-item" href="/edit/1">
+                                <i class="fas fa-edit"></i> Редактировать
+                            </a>
+                            <a class="dropdown-item" href="/delete/1">
+                                <i class="fas fa-trash-alt"></i> Удалить
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td>keyword.id</td>
+                <td>keyword.word</td>
+                <td>keyword.category</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-bs-offset="10,20">Действия</button>
+                        <div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/1">
+                                <i class="fas fa-eye"></i> Просмотр
+                            </a>
+                            <a class="dropdown-item" href="/edit/1">
+                                <i class="fas fa-edit"></i> Редактировать
+                            </a>
+                            <a class="dropdown-item" href="/delete/1">
+                                <i class="fas fa-trash-alt"></i> Удалить
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td>keyword.id</td>
+                <td>keyword.word</td>
+                <td>keyword.category</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-bs-offset="10,20">Действия</button>
+                        <div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/1">
+                                <i class="fas fa-eye"></i> Просмотр
+                            </a>
+                            <a class="dropdown-item" href="/edit/1">
+                                <i class="fas fa-edit"></i> Редактировать
+                            </a>
+                            <a class="dropdown-item" href="/delete/1">
+                                <i class="fas fa-trash-alt"></i> Удалить
+                            </a>
+                        </div>
+                    </div>
+                </td>
+                <td>keyword.id</td>
+                <td>keyword.word</td>
+                <td>keyword.category</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

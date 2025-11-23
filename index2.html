@@ -4,144 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме инженера по обслуживанию оборудования</title>
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #34495e;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .navbar {
-            background-color: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-brand, .nav-link {
-            color: white !important;
-        }
-        
-        .nav-link:hover {
-            color: var(--secondary-color) !important;
-        }
-        
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        
-        .section-title {
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--secondary-color);
-            display: inline-block;
-        }
-        
-        .skill-item {
-            margin-bottom: 15px;
-        }
-        
-        .progress {
-            height: 10px;
-            margin-top: 5px;
-        }
-        
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: var(--secondary-color);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 30px;
-        }
-        
-        .timeline-item:before {
-            content: '';
-            position: absolute;
-            left: -38px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--secondary-color);
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px var(--secondary-color);
-        }
-        
-        .card {
-            border: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            margin-bottom: 20px;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .portfolio-item {
-            margin-bottom: 30px;
-        }
-        
-        .testimonial-item {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .testimonial-img {
-            max-width: 200px;
-            margin: 0 auto 15px;
-            border: 5px solid var(--light-color);
-        }
-        
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 30px 0;
-            margin-top: 50px;
-        }
-        
-        .contact-info i {
-            color: var(--secondary-color);
-            margin-right: 10px;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 20px;
-            margin-right: 15px;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--secondary-color);
-        }
-    </style>
+
 </head>
 <body>
     <!-- Header с навигацией -->
@@ -465,9 +333,26 @@
             <div class="row">
                 <div class="col-md-6 mb-4 portfolio-item">
                     <div class="card h-100">
-                        <img src="621020192.png" class="card-img-top" alt="Проект 1">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider1">
+                                <img src="621020192.png" class="slider-image" alt="Проект 1 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Проект+1+-+Фото+2" class="slider-image" alt="Проект 1 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/e74c3c/ffffff?text=Проект+1+-+Фото+3" class="slider-image" alt="Проект 1 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider1">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider1">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators1">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
                         <div class="card-body">
-                            <h4 class="card-title">Модернизация производственной линии</h4>
+                            <h4 class="card-title">Модернизация ребросклеивающего станка для шпона</h4>
                             <p class="card-text">Полная модернизация производственной линии на заводе "МеталлПром" с увеличением производительности на 25%.</p>
                             <p class="card-text"><strong>Задачи:</strong> замена устаревшего оборудования, установка новых систем управления, наладка и пуск в эксплуатацию.</p>
                             <p class="card-text"><strong>Результат:</strong> снижение времени простоя на 40%, повышение точности обработки.</p>
@@ -477,12 +362,29 @@
                 
                 <div class="col-md-6 mb-4 portfolio-item">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Проект 2">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider2">
+                                <img src="https://via.placeholder.com/600x400/2ecc71/ffffff?text=Проект+2+-+Фото+1" class="slider-image" alt="Проект 2 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/9b59b6/ffffff?text=Проект+2+-+Фото+2" class="slider-image" alt="Проект 2 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/f39c12/ffffff?text=Проект+2+-+Фото+3" class="slider-image" alt="Проект 2 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider2">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators2">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
                         <div class="card-body">
-                            <h4 class="card-title">Автоматизация участка сборки</h4>
-                            <p class="card-text">Разработка и внедрение системы автоматизации участка сборки на предприятии ООО "ТехноПром".</p>
-                            <p class="card-text"><strong>Задачи:</strong> проектирование системы, монтаж оборудования, программирование ПЛК, обучение персонала.</p>
-                            <p class="card-text"><strong>Результат:</strong> увеличение производительности на 35%, снижение брака на 15%.</p>
+                            <h4 class="card-title"> Сервис управления заявками на закупку ТМЦ</h4>
+                            <p class="card-text"> Разработка и внедрение системы автоматизированного управления заявками службы электроцеха.</p>
+                            <p class="card-text"><strong>Задачи:</strong> написать приложение со следующим функционалом: создание и редактирование заявок, изменение их статуса, присвоение номера, генерация и скачивание готового документа в формате DOCX , сделать деплой на удаленном сервере, обучить персонал. Стек технологий: Python, Django, SQLite, html, css, javascript, bootstrap, docxtpl.</p>
+                            <p class="card-text"><strong>Результат:</strong> увеличение скорости создания, управления заявками, исключение случаев несанкционированного изменения и удаления.</p>
                         </div>
                     </div>
                 </div>
@@ -491,9 +393,26 @@
             <div class="row">
                 <div class="col-md-6 mb-4 portfolio-item">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Проект 3">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider3">
+                                <img src="https://via.placeholder.com/600x400/e67e22/ffffff?text=Проект+3+-+Фото+1" class="slider-image" alt="Проект 3 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/34495e/ffffff?text=Проект+3+-+Фото+2" class="slider-image" alt="Проект 3 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/16a085/ffffff?text=Проект+3+-+Фото+3" class="slider-image" alt="Проект 3 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider3">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider3">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators3">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
                         <div class="card-body">
-                            <h4 class="card-title">Реконструкция системы вентиляции</h4>
+                            <h4 class="card-title">Реконструкция фрезерного станка</h4>
                             <p class="card-text">Реконструкция системы промышленной вентиляции и аспирации на деревообрабатывающем предприятии.</p>
                             <p class="card-text"><strong>Задачи:</strong> диагностика существующей системы, разработка проекта модернизации, монтаж и наладка нового оборудования.</p>
                             <p class="card-text"><strong>Результат:</strong> повышение эффективности очистки воздуха на 50%, снижение энергопотребления на 20%.</p>
@@ -503,9 +422,250 @@
                 
                 <div class="col-md-6 mb-4 portfolio-item">
                     <div class="card h-100">
-                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Проект 4">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
                         <div class="card-body">
-                            <h4 class="card-title">Внедрение системы предиктивного обслуживания</h4>
+                            <h4 class="card-title">Ремонт брикетировочного пресса ООО "Интермет"</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Подбор оборудования</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Монтажные и пусконаладоные работы приточной и вытяжной вентиляции УПКБ</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Монтажные и пусконаладочные работы линии по переработке кабеля S700</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Ремонт брикетировочного пресса ООО "Интермет"</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Монтажные пусконаладочные работы системы автоматики модулей утилизации тепла</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Интегра</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Восток</h4>
+                            <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
+                            <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
+                            <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="https://via.placeholder.com/600x400/8e44ad/ffffff?text=Проект+4+-+Фото+1" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="https://via.placeholder.com/600x400/c0392b/ffffff?text=Проект+4+-+Фото+2" class="slider-image" alt="Проект 4 - Фото 2">
+                                <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Проект+4+-+Фото+3" class="slider-image" alt="Проект 4 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Восток</h4>
                             <p class="card-text">Разработка и внедрение системы предиктивного обслуживания оборудования на химическом производстве.</p>
                             <p class="card-text"><strong>Задачи:</strong> установка датчиков вибрации и температуры, настройка системы мониторинга, разработка методик анализа данных.</p>
                             <p class="card-text"><strong>Результат:</strong> сокращение внеплановых простоев на 60%, оптимизация графика ТО.</p>
@@ -604,5 +764,6 @@
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer=""></script>
 </body>
 </html>

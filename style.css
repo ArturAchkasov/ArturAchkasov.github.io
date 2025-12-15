@@ -272,3 +272,145 @@
     transform: scale(1);
     transition: opacity 0.3s, transform 0.3s;
 }
+
+/* Стили для раздела Навыки */
+.skills-group {
+    margin-bottom: 1.5rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.skills-list li:hover {
+    background-color: #e9f7fe;
+    transform: translateX(5px);
+    border-left-color: #2980b9;
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.skill-tag {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* === Стили для видеофона (Вариант 1) === */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Темный оверлей */
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Для лучшей читаемости текста на видео */
+.hero-section h1, 
+.hero-section h2, 
+.hero-section .lead {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#contact .social-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0;
+}
+
+#contact .social-icon {
+    color: #2c3e50 !important; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact .social-links a {
+    color: inherit !important;
+}
+
+#contact .social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#contact .social-icon:hover .fa-telegram {
+    color: #0088cc !important;
+}
+
+#contact .social-icon:hover .fa-github {
+    color: #333 !important;
+}
+
+#contact .social-icon i {
+    font-size: 1.8rem;
+}
+
+#contact .social-links a {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}

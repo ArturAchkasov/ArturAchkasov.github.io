@@ -247,3 +247,15 @@ document.addEventListener('DOMContentLoaded', function() {
         currentProjectName = '';
     });
 });
+
+function showSuccessMessage() {
+    setTimeout(() => {
+        document.getElementById('successMessage').classList.remove('d-none');
+        document.getElementById('contactForm').reset();
+        
+        // Скрыть сообщение через 5 секунд
+        setTimeout(() => {
+            document.getElementById('successMessage').classList.add('d-none');
+        }, 5000);
+    }, 500);
+}

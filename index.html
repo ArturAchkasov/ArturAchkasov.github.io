@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме инженера по обслуживанию оборудования</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Header с навигацией -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-tools me-2"></i>Инженер по оборудованию
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Обо мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Опыт работы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Навыки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Образование</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Курсы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="hero-section" style="position: relative; min-height: 100vh; display: flex; align-items: center; background: #000; color: white; overflow: hidden;">
+    <!-- Простейший видеофон -->
+        <video autoplay muted loop playsinline 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+            <source src="videos/12154.mp4" type="video/mp4">
+        </video>
+    
+    <!-- Темный оверлей -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1;"></div>
+    
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center mb-4 mb-md-0">
+                    <img src="my_photo.jpg" alt="Фото инженера" class="rounded-circle img-fluid" style="max-width: 250px;">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="display-4 fw-bold">Ачкасов Артур Игоревич</h1>
+                    <h2 class="h3 mb-4">Инженер по оборудованию</h2>
+                    <p class="lead">Специалист с опытом более 10 лет обслуживания, монтажа, ремонта и модернизации промышленного оборудования, систем КИПиА и АСУ ТП</p>
+                    <a href="#contact" class="btn btn-light btn-lg mt-3">Связаться со мной</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                <p>Я инженер по промышленному оборудованию и инженерным системам (КИПиА, АСУ ТП). Имею опыт работы с широким спектром оборудования: от систем вентиляции и энергоснабжения до автоматизированных линий и станков. Обладаю широким спектром навыков, с которыми можно ознакомиться в разделе <a href="#skills">«Навыки»</a>.</p>
+                
+                <p>Могу работать как самостоятельно, так и руководить небольшими проектами или бригадой — от постановки задачи и распределения обязанностей до контроля качества и сроков.</p>
+
+                <p>Работа в компании <strong>Toyota</strong> стала ключевым этапом в моем профессиональном развитии. Философия <strong>«кайдзен»</strong> (постоянное улучшение) сформировала мой подход к работе: я не просто выполняю свою работу, а ищу системные решения для улучшения и оптимизации процессов. Этот принцип побуждает меня постоянно получать новые знания и оттачивать навыки на практике.</p>
+
+                <p>Работа с промышленными контроллерами и платформой Arduino, подстегнула мой интерес, на развитие в IT-сфере, что привело меня к изучению языка Python. В настоящее время совершенствую свои навыки, применяя его на практике. Мои цели на 2026 год: углубить знания в промышленной автоматизации (<strong>PLC Siemens, WinCC, Master SCADA</strong>) и расширить стек технологий, изучая <strong>PyQt/C++ Qt</strong> для desktop-приложений и <strong>PyTorch/OpenCV</strong> для задач компьютерного зрения в промышленности, HTML, CSS и JavaScript для frontend разработки. Также планирую повысить уровень английского до <strong>B2</strong>.</p>
+
+                <p class="mb-0">Для профессионального роста регулярно изучаю контент на YouTube и Habr, а для баланса и свежего взгляда нахожу вдохновение в фотографии, спорте и отдыхе на природе.</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Опыт работы -->
+    <section id="experience" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Опыт работы</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Наладчик КИПиА</h4>
+                    <h5><a href="https://chudoform.com">"Чудово РВС"</a></h5> 
+                    <p class="text-muted">2024 - настоящее время</p>
+                    <ul>
+                        <li>Обеспечение работы оборудования, инженерных систем предприятия по части КИПиА, АСУ ТП</li> 
+                        <li>Поддержка необходимого количества ТМЦ, составление заявок на закупку, поиск и внедрение аналогов.</li> 
+                        <li>Организация и проведение планового технического обслуживания промышленного оборудования</li>
+                        <li>Ведение технической документации и отчетности</li>
+                        <li>Участие в модернизации и автоматизации производственных линий</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Руководитель</h4>
+                    <h5>"ИП Ачкасов А.И."</h5>
+                    <p class="text-muted">2022 - 2024</p>
+                    <ul>
+                        <li>Монтаж, пусконаладка, модернизация, обслуживание промышленного оборудования, объектов малой энергетики, производственных линий, инженерных систем</li>
+                        <li>Проектирование, сборка электрощитового оборудования</li>
+                        <li>Обучение операторов работе на оборудовании</li>
+                        <li>Составление графиков технического обслуживания</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>Техник</h4>
+                    <h5><a href="https://toyota.ru">"Тойота мотор"</a></h5>
+                    <p class="text-muted">2015 - 2022</p>
+                    <ul>
+                        <li>Ремонт и обслуживание оборудования цеха сборки по всем направлениям: механика, гидравлика, пневматика, КИПиА, АСУ ТП и т.д.</li>
+                        <li>Участие в профилактических ремонтах, модернизации оборудования предприятия;</li>
+                        <li>Участие в разработке и монтаже нового оборудования</li>
+                        <li>Составление технической документации</li>
+                        <li>Создание организационных мероприятий, для усовершенствования процессов производства, сокращения издержек, обеспечения безопасных условий труда, составление, графиков, ППРов</li>
+                        <li>Работа с механикой, пневматикой, гидравликой, КИПиА, АСУ ТП</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>Наладчик КИПиА</h4>
+                    <h5><a href="https://ursa.ru">"УРСА Евразия"</a></h5>
+                    <p class="text-muted">2013 - 2015</p>
+                    <ul>
+                        <li>Обеспечение работы оборудования, инженерных систем предприятия по части КИПиА, АСУ ТП</li>
+                        <li>Организация и проведение планового технического обслуживания промышленного оборудования</li>
+                        <li>Ведение технической документации и отчетности</li>
+                        <li>Участие в модернизации и автоматизации производственных линий</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>Электромонтер ОПС</h4>
+                    <h5>"Охранное агенство Витязи"</h5>
+                    <p class="text-muted">2012 - 2013</p>
+                    <ul>
+                        <li>Монтаж, обслуживание систем ОПС, СВН, СКУД</li>
+                        <li>Инструктаж по правилам эксплуатации систем охранной и пожарной сигнализации</li>
+                        <li>Составление отчётов о выполненных работах и состоянии системы</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>Электромонтер распределительных сетей</h4>
+                    <h5><a href="https://nokes.ru">"Новгородоблэлектро"</a></h5>
+                    <p class="text-muted">2009 - 2009</p>
+                    <ul>
+                        <li>Проведение плановых и послеаварийных осмотров оборудования распределительных сетей, осмотр воздушных и кабельных линий, трансформаторных подстанций и распределительных пунктов</li>
+                        <li>Участие в строительстве новых линий электропередачи, установка опор, монтаж изоляторов и проводов</li>
+                        <li>Подключение абонентов, монтаж линейных вводов в здания и жилые дома</li>
+                        <li>Прокладка кабельных линий в траншеях, кабельных каналах и технических этажах зданий, установка кабельных муфт</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="section-title">Профессиональные навыки</h2>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="skills-group">
+                    <ul class="skills-list">
+                        <li>Механика</li>
+                        <li>Пневматика</li>
+                        <li>Гидравлика</li>
+                        <li>Электротехника</li>
+                        <li>КИПиА</li>
+                        <li>АСУ ТП</li>
+                        <li>Работа с системами ЧПУ</li>
+                        <li>Работа с мехатронными системами</li>
+                        <li>Сварочные работы</li>    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="skills-group">
+                    <ul class="skills-list">
+                        <li>Работа с технической документацией</li>
+                        <li>Проектирование</li>
+                        <li>Программирование ПЛК</li>
+                        <li>Системы CAD (AutoCAD, КОМПАС)</li>
+                        <li>Python (Django, автоматизация)</li>
+                        <li>C++ (Arduino, QT)</li>
+                        <li>Веб-технологии (HTML, CSS, JavaScript)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12">
+                <h4 class="mb-3">Технологии и инструменты</h4>
+                <div class="skills-tags">
+                    <span class="skill-tag">Siemens TIA Portal</span>
+                    <span class="skill-tag">STEP 7</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Arduino</span>
+                    <span class="skill-tag">AutoCAD</span>
+                    <span class="skill-tag">КОМПАС</span>
+                    <span class="skill-tag">Master SCADA</span>
+                    <span class="skill-tag">HTML/CSS/JS</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">SQLite</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Образование -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Образование</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-subtitle mb-2 text-muted">ОГА ПОУ "Чудовский техникум"</h4>
+                            <p class="card-text">Специальность: Электромонтер по ремонту и обслуживанию электрооборудования 4 разряда</p>
+                            <p class="card-text">2008 - 2011</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-subtitle mb-2 text-muted">Новгородский государственный университет им. Я. Мудрого, Великий Новгород</h4>
+                            <p class="card-text">Специальность: Информатика и вычислительная техника</p>
+                            <p class="card-text">2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Курсы повышения квалификации -->
+    <section id="courses" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Курсы повышения квалификации</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Python-разработчик. Расширенный</h4>
+                            <p class="card-text">Яндекс.Практикум</p>
+                            <p class="card-text">2024-2025 г. (612 часов)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Проектриование силового и осветительного электрооборудования промышленных предприятий и установок</h4>
+                            <p class="card-text">Санкт-Петербургский государственный Электротехнический университет "ЛЭТИ" им. В.И. Ульянова (Ленина)</p>
+                            <p class="card-text">2019 г. (72 часа)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Оператор станков с программным управлением</h4>
+                            <p class="card-text">Учебный центр "Эдем"</p>
+                            <p class="card-text">2022 г. (140 часов)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Токарь. Фрезеровщик</h4>
+                            <p class="card-text">Учебный центр "Эдем"</p>
+                            <p class="card-text">2019 г. (304 часа)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Портфолио проектов</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider12">
+                                <img src="portfolio/12_rebro/rebro_1.jpg" class="slider-image" alt="Проект 12 - Фото 1">
+                                <img src="portfolio/12_rebro/rebro_2.jpg" class="slider-image" alt="Проект 12 - Фото 2">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider12">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider12">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators12">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Модернизация ребросклеивающего станка для шпона</h4>
+                            <p class="card-text"> В данном проекте мне потребовалось выяснить причины возникновения сбоев в работе оборудования. Для этого в среде TIA Portal использовал инструмент traces. Удалось найти место сбоя в части программы, отвечающей за считывание передней и задней кромки шпона. После, произвел корректировку программы контроллера Siemens S7-1500.</p>
+                            <p class="card-text"><strong>Задачи:</strong> снизить количество случаев залома шпона, не правильной стыковки листов.</p>
+                            <p class="card-text"><strong>Результат:</strong> уменьшилось количество и время простоев оборудования, сокращен выход брака.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider11">
+                                <img src="portfolio/11_mms_service/mms1.jpg" class="slider-image" alt="Проект 11 - Фото 1">
+                                <img src="portfolio/11_mms_service/mms2.jpg" class="slider-image" alt="Проект 11 - Фото 2">
+                                <img src="portfolio/11_mms_service/mms3.jpg" class="slider-image" alt="Проект 11 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider11">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider11">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators11">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Сервис управления заявками на закупку ТМЦ</h4>
+                            <p class="card-text"> Разработка и внедрение системы автоматизированного управления заявками службы электроцеха.</p>
+                            <p class="card-text"><strong>Задачи:</strong> написать приложение со следующим функционалом: создание и редактирование заявок, изменение их статуса, присвоение номера, генерация и скачивание готового документа в формате DOCX , сделать деплой на удаленном сервере, обучить персонал. Стек технологий: Python, Django, SQLite, html, css, javascript, bootstrap, docxtpl.</p>
+                            <p class="card-text"><strong>Результат:</strong> увеличение скорости создания, управления заявками, исключение случаев несанкционированного изменения и удаления.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider10">
+                                <img src="portfolio/10_frezer/frezer1.jpg" class="slider-image" alt="Проект 10 - Фото 1">
+                                <img src="portfolio/10_frezer/frezer2.jpg" class="slider-image" alt="Проект 10 - Фото 2">
+                                <img src="portfolio/10_frezer/frezer3.png" class="slider-image" alt="Проект 10 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider10">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider10">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators10">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Реконструкция фрезерного станка</h4>
+                            <p class="card-text">Восстановление фрезерного станка после длительного простоя и частичного разукомплектования.</p>
+                            <p class="card-text"><strong>Задачи:</strong> спроектировать и собрать новый щит управления, заменить кабеля и датчики, произвести пусконаладочные работы.</p>
+                            <p class="card-text"><strong>Результат:</strong> После запуска станка компания начала производить двухкантный брус для собственных нужд.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider9">
+                                <img src="portfolio/9_intermet/intermet1.jpg" class="slider-image" alt="Проект 11 - Фото 1">
+                                <img src="portfolio/9_intermet/intermet2.jpg" class="slider-image" alt="Проект 11 - Фото 2">
+                                <img src="portfolio/9_intermet/intermet3.jpg" class="slider-image" alt="Проект 11 - Фото 3">
+                                <img src="portfolio/9_intermet/intermet4.jpg" class="slider-image" alt="Проект 11 - Фото 4">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider9">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider9">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators9">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Ремонт брикетировочного пресса</h4>
+                            <p class="card-text">Произведено расследование причины не штатной работы оборудования. Найден релейный выход контроллера SIEMENS S7-200 SMART, периодически происходило залипание контакта, что приводило не своевременному отключению управляющего сигнала гидросраспределителя. Произведено переключение на другой выход, и корректировка программы PLC.</p>
+                            <p class="card-text"><strong>Задачи:</strong> во время работы оборудования срабатывает клапан аварийного сбросала давления, необходимо найти неисправность.</p>
+                            <p class="card-text"><strong>Результат:</strong> оборудование работает в штатном режиме, службе эксплуатации переданы рекоммендации по продлению срока службы контроллера.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider8">
+                                <img src="portfolio/8_china/china1.jpg" class="slider-image" alt="Проект 8 - Фото 1">
+                                <img src="portfolio/8_china/china2.jpg" class="slider-image" alt="Проект 8 - Фото 2">
+                                <img src="portfolio/8_china/china3.jpg" class="slider-image" alt="Проект 8 - Фото 3">
+                                <img src="portfolio/8_china/china4.jpg" class="slider-image" alt="Проект 8 - Фото 4">
+                                <img src="portfolio/8_china/china5.jpg" class="slider-image" alt="Проект 8 - Фото 5">
+                                <img src="portfolio/8_china/china6.jpg" class="slider-image" alt="Проект 8 - Фото 6">
+                                <img src="portfolio/8_china/china7.jpg" class="slider-image" alt="Проект 8 - Фото 7">
+                                <img src="portfolio/8_china/china8.jpg" class="slider-image" alt="Проект 8 - Фото 8">
+                                <img src="portfolio/8_china/china9.jpg" class="slider-image" alt="Проект 8 - Фото 9">
+                                <img src="portfolio/8_china/china10.jpg" class="slider-image" alt="Проект 8 - Фото 10">
+                                <img src="portfolio/8_china/china11.jpg" class="slider-image" alt="Проект 8 - Фото 11">
+                                <img src="portfolio/8_china/china12.jpg" class="slider-image" alt="Проект 8 - Фото 12">
+                            
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider8">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider8">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators8">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Подбор оборудования по вторичной переработки материалов</h4>
+                            <p class="card-text">Посещение более 10 предприятий на территории Китая, консультация клиента по технической части, определния поставщика сбалансированным показателем цена/качества оборудования.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider7">
+                                <img src="portfolio/7_electric_panel/ep1.jpg" class="slider-image" alt="Проект 7 - Фото 1">
+                                <img src="portfolio/7_electric_panel/ep2.jpg" class="slider-image" alt="Проект 7 - Фото 2">
+                                <img src="portfolio/7_electric_panel/ep3.jpg" class="slider-image" alt="Проект 7 - Фото 3">
+                                <img src="portfolio/7_electric_panel/ep4.jpg" class="slider-image" alt="Проект 7 - Фото 4">
+                                <img src="portfolio/7_electric_panel/ep5.jpg" class="slider-image" alt="Проект 7 - Фото 5">
+                                <img src="portfolio/7_electric_panel/ep6.jpg" class="slider-image" alt="Проект 7 - Фото 6">
+                                <img src="portfolio/7_electric_panel/ep7.jpg" class="slider-image" alt="Проект 7 - Фото 7">
+                                <img src="portfolio/7_electric_panel/ep8.jpg" class="slider-image" alt="Проект 7 - Фото 8">
+                                <img src="portfolio/7_electric_panel/ep9.jpg" class="slider-image" alt="Проект 7 - Фото 9">
+                                <img src="portfolio/7_electric_panel/ep10.jpg" class="slider-image" alt="Проект 7 - Фото 10">
+                                <img src="portfolio/7_electric_panel/ep11.jpg" class="slider-image" alt="Проект 7 - Фото 11">
+                                <img src="portfolio/7_electric_panel/ep12.jpg" class="slider-image" alt="Проект 7 - Фото 12">
+                                <img src="portfolio/7_electric_panel/ep13.jpg" class="slider-image" alt="Проект 7 - Фото 13">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider7">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider7">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators7">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Сборка электрощитов</h4>
+                            <p class="card-text">Некоторые мои работы по сборке электрощитового оборудования.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider6">
+                                <img src="portfolio/6_upkb/upkb1.jpeg" class="slider-image" alt="Проект 6 - Фото 1">
+                                <img src="portfolio/6_upkb/upkb2.jpg" class="slider-image" alt="Проект 6 - Фото 2">
+                                <img src="portfolio/6_upkb/upkb3.jpg" class="slider-image" alt="Проект 6 - Фото 3">
+                                <img src="portfolio/6_upkb/upkb4.jpg" class="slider-image" alt="Проект 6 - Фото 4">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider6">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider6">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators6">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Проектные, монтажные и пусконаладоные работы приточной и вытяжной вентиляции г. Каменск-Уральский</h4>
+                            <p class="card-text">В рамках данного кейса выполненые следующие виды работ:
+                                <ul>
+                                    <li>Электрощиты управления приточной вентилация на базе ПЛК ОВЕН ПР205, сборка, монтаж, пусконаладка</li>
+                                    <li>Электрощиты управления вытяжной выентиляцией на базе модулей ввода/вывода ОВЕН Мх210 с интерфейсом Ethernet, проектирование, сборка, монтаж пусконаладка</li>
+                                    <li>Интеграция смонтированой вентиляции с SCADA EcoStruxure</li>
+                                    <li>Обучение службы эксплуатации и ремонта</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider5">
+                                <img src="portfolio/5_kstovo/kstovo1.jpg" class="slider-image" alt="Проект 5 - Фото 1">
+                                <img src="portfolio/5_kstovo/kstovo2.jpg" class="slider-image" alt="Проект 5 - Фото 2">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider5">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider5">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators5">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Автоматика модуля утилизации тепла, установки дожига отходящих газов г. Кстово</h4>
+                            <p class="card-text">В рамках данного кейса выполненые следующие виды работ:
+                                <ul>
+                                    <li>Сборка электрощита управления на базе PLC S7-1200</li>
+                                    <li>Монтажные и пусконаладочные работы на объекте</li>
+                                    <li>Обучение службы эксплуатации и ремонта</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider4">
+                                <img src="portfolio/4_kamchatka/kamchatka1.jpg" class="slider-image" alt="Проект 4 - Фото 1">
+                                <img src="portfolio/4_kamchatka/kamchatka2.jpg" class="slider-image" alt="Проект 4 - Фото 2">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider4">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators4">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Автоматика модулей утилизации тепла ДГУ п. Усть-Камчатск</h4>
+                            <p class="card-text">В рамках данного кейса выполненые следующие виды работ:
+                                <ul>
+                                    <li>Сборка электрощита управления</li>
+                                    <li>Монтажные и пусконаладочные работы на объекте</li>
+                                    <li>Обучение службы эксплуатации и ремонта</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider3">
+                                <img src="portfolio/3_integra_beeline/integra_1.jpg" class="slider-image" alt="Проект 3 - Фото 1">
+                                <img src="portfolio/3_integra_beeline/integra_2.jpg" class="slider-image" alt="Проект 3 - Фото 2">
+                                <img src="portfolio/3_integra_beeline/integra_3.jpg" class="slider-image" alt="Проект 3 - Фото 3">
+                                <img src="portfolio/3_integra_beeline/integra_4.jpg" class="slider-image" alt="Проект 3 - Фото 4">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider3">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider3">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators3">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Модернизация систем электропитания объектов связи</h4>
+                            <p class="card-text">Монтажные и пусконаладочные работы систем бесперебойного питания Huawei на объектах ПАО "Вымпелком".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider2">
+                                <img src="portfolio/2_S700_S300/IMG_20211027_134701.jpg" class="slider-image" alt="Проект 2 - Фото 1">
+                                <img src="portfolio/2_S700_S300/IMG_20201224_121002.jpg" class="slider-image" alt="Проект 2 - Фото 2">
+                                <img src="portfolio/2_S700_S300/blade.jpg" class="slider-image" alt="Проект 2 - Фото 3">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider2">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider2">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators2">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Монтажные и пусконаладочные работы линии по переработке кабеля S700 S300</h4>
+                            <p class="card-text">В рамках данного кейса выполненые следующие виды работ:
+                                <ul>
+                                    <li>Монтажные и пусконаладочные работы на объектах, установок по переработке кабеля</li>
+                                    <li>Перевод, доработка технической документации</li>
+                                    <li>Изготовления чертежей расходных запчастей</li>
+                                    <li>Модернизация прешредера на базе PLC ОВЕН ПР100+ИП320</li>
+                                    <li>Обучение службы эксплуатации и ремонта</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 portfolio-item">
+                    <div class="card h-100">
+                        <div class="portfolio-slider">
+                            <div class="slider-container" id="slider1">
+                                <img src="portfolio/1_vostok/image-27-08-20-06-58.jpeg" class="slider-image" alt="Проект 1 - Фото 1">
+                                <img src="portfolio/1_vostok/IMG_20200822_185817.jpg" class="slider-image" alt="Проект 1 - Фото 2">
+                                <img src="portfolio/1_vostok/IMG_20200822_185232.jpg" class="slider-image" alt="Проект 1 - Фото 3">
+                                <img src="portfolio/1_vostok/IMG_20200822_184929.jpg" class="slider-image" alt="Проект 1 - Фото 4">
+                                <img src="portfolio/1_vostok/IMG_20200823_125036.jpg" class="slider-image" alt="Проект 1 - Фото 5">
+                                <img src="portfolio/1_vostok/IMG_20200823_125004.jpg" class="slider-image" alt="Проект 1 - Фото 6">
+                                <img src="portfolio/1_vostok/IMG_20200823_125607.jpg" class="slider-image" alt="Проект 1 - Фото 7">
+                            </div>
+                            <div class="slider-controls">
+                                <button class="slider-btn prev-btn" data-slider="slider1">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="slider-btn next-btn" data-slider="slider1">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="slider-indicators" id="indicators1">
+                                <!-- Индикаторы будут добавлены через JavaScript -->
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Антарктическая станция "Восток"</h4>
+                            <p class="card-text">В рамках данного кейса выполнены монтажные и пусконаладоные работы следущих систем:
+                                <ul>
+                                    <li>Вентиляции</li>
+                                    <li>Управления ДГУ</li>
+                                    <li>Утилизации тепла</li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Отзывы и благодарности</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+        
+                        <div class="card-body testimonial-item">
+                            <img src="testimonials/Scan1.jpg" alt="Благодарность 1" class="testimonial-img img-fluid rounded">
+                            <h5 class="card-title">Благодарность от ООО "Дигам"</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body testimonial-item">
+                            <img src="testimonials/Scan2.jpg" alt="Благодарность 2" class="testimonial-img img-fluid rounded">
+                            <h5 class="card-title">Благодарность от ИП Щукин</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body testimonial-item">
+                            <img src="testimonials/Scan3.jpg" alt="Благодарность 3" class="testimonial-img img-fluid rounded">
+                            <h5 class="card-title">Благодарность от ООО "Интегра"</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="row">
+                <!-- Левая колонка с контактной информацией -->
+                <div class="col-md-6">
+                    <div class="contact-info mb-4">
+                        <p><i class="fas fa-phone"></i> +7 (999) 223-98-38</p>
+                        <p><i class="fas fa-envelope"></i> Artur-aid@yandex.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Санкт-Петербург, Витебский пр-т, д. 87 к. 1</p>
+                    </div>
+
+                    <div class="social-links mb-4">
+                        <a href="https://t.me/arthur_twizard" target="_blank" class="social-icon me-3">
+                            <i class="fab fa-telegram fa-2x"></i>
+                        </a>
+                        <a href="https://github.com/ArturAchkasov" target="_blank" class="social-icon">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Правая колонка с формой -->
+                <div class="col-md-6">
+                    <!-- Форма, отправляющая данные на внешний сервис FormSubmit[citation:4] -->
+                    <form id="contactForm" action="https://formsubmit.co/Artur-aid@yandex.ru" method="POST">
+                        <!-- Скрытые поля для настройки FormSubmit[citation:4][citation:5] -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Новое сообщение с сайта-резюме">
+                        <!-- Укажите здесь реальный URL вашей страницы на GitHub Pages -->
+                        <input type="hidden" name="_next" value="https://arturachkasov.github.io/your-repo-name/#contact">
+                        <input type="hidden" name="_template" value="table">
+                        <!-- Дополнительное скрытое поле для защиты от спама[citation:5] -->
+                        <input type="text" name="_honey" style="display:none">
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <!-- Важно: поле для email должно иметь name="email" для работы autoresponse[citation:5] -->
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <!-- Для _autoresponse нужен email пользователя[citation:5] -->
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="copy" name="_autoresponse" checked>
+                            <label class="form-check-label" for="copy">Отправить мне копию письма</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+
+                        <!-- Сообщение об успешной отправке -->
+                        <div id="successMessage" class="alert alert-success mt-3 d-none">
+                            Сообщение отправлено! Спасибо, я скоро свяжусь с вами.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Ачкасов Артур Игоревич. Все права защищены.</p>
+        </div>
+    </footer>
+    <div id="imageModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Просмотр изображения</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="modal-slider-container">
+                    <img id="modalImage" src="" alt="" class="img-fluid">
+                </div>
+                <div class="modal-slider-controls mt-3">
+                    <button class="btn btn-primary me-2" id="prevModalBtn">
+                        <i class="fas fa-chevron-left"></i> Назад
+                    </button>
+                    <span id="modalCounter">1 / 3</span>
+                    <button class="btn btn-primary ms-2" id="nextModalBtn">
+                        Вперед <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer=""></script>
+
+</body>
+</html>

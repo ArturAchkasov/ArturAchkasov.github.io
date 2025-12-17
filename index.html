@@ -70,7 +70,7 @@
                 </div>
                 <div class="col-md-8">
                     <h1 class="display-4 fw-bold">Ачкасов Артур Игоревич</h1>
-                    <h2 class="h3 mb-4">Инженер по обслуживанию оборудования</h2>
+                    <h2 class="h3 mb-4">Инженер по оборудованию</h2>
                     <p class="lead">Специалист с опытом более 10 лет обслуживания, монтажа, ремонта и модернизации промышленного оборудования, систем КИПиА и АСУ ТП</p>
                     <a href="#contact" class="btn btn-light btn-lg mt-3">Связаться со мной</a>
                 </div>
@@ -596,10 +596,10 @@
                     <div class="card h-100">
                         <div class="portfolio-slider">
                             <div class="slider-container" id="slider3">
-                                <img src="portfolio/3_integra_beeline/IMG_20211216_031632.jpg" class="slider-image" alt="Проект 3 - Фото 1">
-                                <img src="portfolio/3_integra_beeline/IMG_20211223_193512.jpg" class="slider-image" alt="Проект 3 - Фото 2">
-                                <img src="portfolio/3_integra_beeline/IMG_20211223_193600.jpg" class="slider-image" alt="Проект 3 - Фото 3">
-                                <img src="portfolio/3_integra_beeline/IMG_20211223_194407.jpg" class="slider-image" alt="Проект 3 - Фото 4">
+                                <img src="portfolio/3_integra_beeline/integra_1.jpg" class="slider-image" alt="Проект 3 - Фото 1">
+                                <img src="portfolio/3_integra_beeline/integra_2.jpg" class="slider-image" alt="Проект 3 - Фото 2">
+                                <img src="portfolio/3_integra_beeline/integra_3.jpg" class="slider-image" alt="Проект 3 - Фото 3">
+                                <img src="portfolio/3_integra_beeline/integra_4.jpg" class="slider-image" alt="Проект 3 - Фото 4">
                             </div>
                             <div class="slider-controls">
                                 <button class="slider-btn prev-btn" data-slider="slider3">
@@ -735,15 +735,16 @@
         <div class="container">
             <h2 class="section-title">Контакты</h2>
             <div class="row">
+                <!-- Левая колонка с контактной информацией -->
                 <div class="col-md-6">
                     <div class="contact-info mb-4">
                         <p><i class="fas fa-phone"></i> +7 (999) 223-98-38</p>
                         <p><i class="fas fa-envelope"></i> Artur-aid@yandex.ru</p>
                         <p><i class="fas fa-map-marker-alt"></i> г. Санкт-Петербург, Витебский пр-т, д. 87 к. 1</p>
                     </div>
-                    
+
                     <div class="social-links mb-4">
-                        <a href="https://t.me/arthur_twizard" target="_blank" class="social-icon">
+                        <a href="https://t.me/arthur_twizard" target="_blank" class="social-icon me-3">
                             <i class="fab fa-telegram fa-2x"></i>
                         </a>
                         <a href="https://github.com/ArturAchkasov" target="_blank" class="social-icon">
@@ -751,41 +752,47 @@
                         </a>
                     </div>
                 </div>
-                
+
+                <!-- Правая колонка с формой -->
                 <div class="col-md-6">
-                    <form id="contactForm" action="https://formsubmit.co/Artur-aid@yandex.ru" method="POST" target="formFrame">
+                    <!-- Форма, отправляющая данные на внешний сервис FormSubmit[citation:4] -->
+                    <form id="contactForm" action="https://formsubmit.co/Artur-aid@yandex.ru" method="POST">
+                        <!-- Скрытые поля для настройки FormSubmit[citation:4][citation:5] -->
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_subject" value="Новое сообщение с сайта-резюме">
-                        <input type="hidden" name="_next" value="#">
+                        <!-- Укажите здесь реальный URL вашей страницы на GitHub Pages -->
+                        <input type="hidden" name="_next" value="https://arturachkasov.github.io/your-repo-name/#contact">
                         <input type="hidden" name="_template" value="table">
-                        
+                        <!-- Дополнительное скрытое поле для защиты от спама[citation:5] -->
+                        <input type="text" name="_honey" style="display:none">
+
                         <div class="mb-3">
                             <label for="name" class="form-label">Ваше имя</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
+                            <!-- Важно: поле для email должно иметь name="email" для работы autoresponse[citation:5] -->
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Сообщение</label>
                             <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                         </div>
-                        
+
+                        <!-- Для _autoresponse нужен email пользователя[citation:5] -->
                         <div class="form-check mb-3">
                             <input type="checkbox" class="form-check-input" id="copy" name="_autoresponse" checked>
                             <label class="form-check-label" for="copy">Отправить мне копию письма</label>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary" onclick="showSuccessMessage()">Отправить сообщение</button>
-                        
+
+                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+
+                        <!-- Сообщение об успешной отправке -->
                         <div id="successMessage" class="alert alert-success mt-3 d-none">
                             Сообщение отправлено! Спасибо, я скоро свяжусь с вами.
                         </div>
                     </form>
-                    
-                    <!-- Скрытый iframe для отправки -->
-                    <iframe name="formFrame" class="d-none"></iframe>
                 </div>
             </div>
         </div>

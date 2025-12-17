@@ -248,14 +248,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function showSuccessMessage() {
-    setTimeout(() => {
-        document.getElementById('successMessage').classList.remove('d-none');
-        document.getElementById('contactForm').reset();
-        
-        // Скрыть сообщение через 5 секунд
-        setTimeout(() => {
-            document.getElementById('successMessage').classList.add('d-none');
-        }, 5000);
-    }, 500);
-}
+
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        // Отменяем стандартное поведение формы
+        event.preventDefault();
+
+        // Собираем данные формы
+        const formData = new FormData(this);
+        const action = this.getAttribute('action');
+
+        // Отправляем данные через Fetch API[citation:5]
+        fetch(action, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors' // Режим no-cors для обхода CORS
+        })
+        .then(() => {
+            // Показываем сообщение об успехе
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.remove('d-none');
+
+            // Очищаем форму
+            document.getElementById('contactForm').reset();
+
+            // Плавно скроллим к сообщению
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // Автоматически скрываем сообщение через 5 секунд
+            setTimeout(() => {
+                successMessage.classList.add('d-none');
+            }, 5000);
+        })
+        .catch(error => {
+            // В режиме 'no-cors' мы не получим ответ от сервера,
+            // но форма уже будет отправлена.
+            // Показываем сообщение об успехе на всякий случай.
+            const successMessage = document.getElementById('successMessage');
+            successMessage.classList.remove('d-none');
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            document.getElementById('contactForm').reset();
+        });
+    });

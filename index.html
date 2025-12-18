@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме инженера по обслуживанию оборудования</title>
+    <title>Резюме инженера по оборудованию</title>
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -671,7 +671,6 @@
                                 </button>
                             </div>
                             <div class="slider-indicators" id="indicators1">
-                                <!-- Индикаторы будут добавлены через JavaScript -->
                             </div>
                         </div>
                         <div class="card-body">
@@ -728,19 +727,16 @@
         </div>
     </section>
 
-    <!-- Контакты -->
     <section id="contact" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-title">Контакты</h2>
             <div class="row">
-                <!-- Левая колонка с контактной информацией -->
                 <div class="col-md-6">
                     <div class="contact-info mb-4">
                         <p><i class="fas fa-phone"></i> +7 (999) 223-98-38</p>
                         <p><i class="fas fa-envelope"></i> Artur-aid@yandex.ru</p>
                         <p><i class="fas fa-map-marker-alt"></i> г. Санкт-Петербург, Витебский пр-т, д. 87 к. 1</p>
                     </div>
-
                     <div class="social-links mb-4">
                         <a href="https://t.me/arthur_twizard" target="_blank" class="social-icon me-3">
                             <i class="fab fa-telegram fa-2x"></i>
@@ -750,46 +746,23 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Правая колонка с формой -->
                 <div class="col-md-6">
-                    <!-- Форма, отправляющая данные на внешний сервис FormSubmit[citation:4] -->
-                    <form id="contactForm" action="https://formsubmit.co/Artur-aid@yandex.ru" method="POST">
-                        <!-- Скрытые поля для настройки FormSubmit[citation:4][citation:5] -->
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="Новое сообщение с сайта-резюме">
-                        <!-- Укажите здесь реальный URL вашей страницы на GitHub Pages -->
-                        <input type="hidden" name="_next" value="https://https://arturachkasov.github.io">
-                        <input type="hidden" name="_template" value="table">
-                        <!-- Дополнительное скрытое поле для защиты от спама[citation:5] -->
-                        <input type="text" name="_honey" style="display:none">
-
+                    <form id="contactForm" action="https://formspree.io/f/mrezzqge" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Ваше имя</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <!-- Важно: поле для email должно иметь name="email" для работы autoresponse[citation:5] -->
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Сообщение</label>
                             <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                         </div>
-
-                        <!-- Для _autoresponse нужен email пользователя[citation:5] -->
-                        <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" id="copy" name="_autoresponse" checked>
-                            <label class="form-check-label" for="copy">Отправить мне копию письма</label>
-                        </div>
-
+                        <input type="hidden" name="_language" value="ru" />
+                        <input type="hidden" name="_next" value="https://arturachkasov.github.io/#contact" />
                         <button type="submit" class="btn btn-primary">Отправить сообщение</button>
-
-                        <!-- Сообщение об успешной отправке -->
-                        <div id="successMessage" class="alert alert-success mt-3 d-none">
-                            Сообщение отправлено! Спасибо, я скоро свяжусь с вами.
-                        </div>
                     </form>
                 </div>
             </div>

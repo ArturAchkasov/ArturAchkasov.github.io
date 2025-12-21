@@ -53,20 +53,18 @@
     </nav>
 
     <!-- Герой секция -->
-    <section class="hero-section" style="position: relative; min-height: 100vh; display: flex; align-items: center; background: #000; color: white; overflow: hidden;">
-    <!-- Простейший видеофон -->
-        <video autoplay muted loop playsinline 
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <section class="hero-section">
+        <video autoplay muted loop playsinline class="video-background">
             <source src="videos/12154.mp4" type="video/mp4">
         </video>
-    
-    <!-- Темный оверлей -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1;"></div>
-    
-        <div class="container" style="position: relative; z-index: 2;">
+
+        <!-- Темный оверлей -->
+        <div class="video-overlay"></div>
+
+        <div class="container hero-container">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="my_photo.jpg" alt="Фото инженера" class="rounded-circle img-fluid" style="max-width: 250px;">
+                    <img src="my_photo.jpg" alt="Фото инженера" class="hero-photo rounded-circle img-fluid">
                 </div>
                 <div class="col-md-8">
                     <h1 class="display-4 fw-bold">Ачкасов Артур Игоревич</h1>
@@ -203,37 +201,73 @@
                     <ul class="skills-list">
                         <li>Работа с технической документацией</li>
                         <li>Проектирование</li>
-                        <li>Программирование ПЛК</li>
+                        <li>Программирование ПЛК (Siemens, ОВЕН, Segnetics)</li>
+                        <li>Работа с протоколами UART, MODBUS RTU, MODBUS TCP, S7COMM</li>
                         <li>Системы CAD (AutoCAD, КОМПАС)</li>
-                        <li>Python (Django, автоматизация)</li>
+                        <li>Python (Django, FastAPI, Flask, SQLAlchemy, python-telegram-bot, автоматизация)</li>
                         <li>C++ (Arduino, QT)</li>
-                        <li>Веб-технологии (HTML, CSS, JavaScript)</li>
+                        <li>Веб-технологии (HTML, CSS, JavaScript, Bootstrap)</li>
                     </ul>
                 </div>
             </div>
         </div>
         
-        <div class="row mt-4">
+        <div class="row mt-5">
             <div class="col-12">
-                <h4 class="mb-3">Технологии и инструменты</h4>
-                <div class="skills-tags">
-                    <span class="skill-tag">Siemens TIA Portal</span>
-                    <span class="skill-tag">STEP 7</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Django</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Arduino</span>
-                    <span class="skill-tag">AutoCAD</span>
-                    <span class="skill-tag">КОМПАС</span>
-                    <span class="skill-tag">Master SCADA</span>
-                    <span class="skill-tag">HTML/CSS/JS</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">SQLite</span>
-                    <span class="skill-tag">PostgreSQL</span>
+                <h4 class="mb-4 text-center">Технологии и инструменты</h4>
+                <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="TIA portal">
+                        <img src="instruments/tia_portal.webp" alt="TIA portal" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="STEP 7">
+                        <img src="instruments/step7.webp" alt="STEP 7" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="Segnetics">
+                        <img src="instruments/Segnetics_SMLogix.jpg" alt="Segnetics" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="OWEN">
+                        <img src="instruments/logo_logic.png" alt="OWEN" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="Python">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="Django">
+                        <img src="https://static.djangoproject.com/img/logos/django-logo-positive.png" alt="Django" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="C++">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" alt="C++" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="Arduino">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1280px-Arduino_Logo.svg.png" alt="Arduino" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="AutoCAD">
+                        <img src="instruments/autocad.jpg" alt="AutoCAD" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="КОМПАС">
+                        <img src="instruments/kompas_invisible.webp" alt="КОМПАС" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="HTML5">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" alt="HTML5" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="CSS3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/640px-CSS3_logo_and_wordmark.svg.png" alt="CSS3" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="JavaScript">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/640px-Unofficial_JavaScript_logo_2.svg.png" alt="JavaScript" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="Git">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/640px-Git-logo.svg.png" alt="Git" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="Bootstrap">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" alt="Bootstrap" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="Docker">
+                        <img src="instruments/docker.webp" alt="Docker" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
+                    <div class="tech-icon" data-bs-toggle="tooltip" title="PostgreSQL">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/640px-Postgresql_elephant.svg.png" alt="PostgreSQL" class="img-fluid" style="width: 60px; height: 60px; object-fit: contain;">
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
 </section>
@@ -747,6 +781,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <!-- Форма с уведомлениями -->
                     <form id="contactForm" action="https://formspree.io/f/mrezzqge" method="POST">
                         <div class="mb-3">
                             <label for="name" class="form-label">Ваше имя</label>
@@ -761,8 +796,14 @@
                             <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
                         </div>
                         <input type="hidden" name="_language" value="ru" />
-                        <input type="hidden" name="_next" value="https://arturachkasov.github.io/#contact" />
-                        <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        
+                        <!-- Уведомления будут появляться здесь -->
+                        <div id="formAlert" style="display: none;"></div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            <span id="submitText">Отправить сообщение</span>
+                            <span id="submitSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                        </button>
                     </form>
                 </div>
             </div>

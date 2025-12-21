@@ -25,13 +25,6 @@
             color: var(--secondary-color) !important;
         }
         
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
-        
         .section-title {
             color: var(--primary-color);
             margin-bottom: 30px;
@@ -333,6 +326,7 @@
     align-items: center;
     overflow: hidden;
     color: white;
+    background: #2c3e50;
 }
 
 .video-background {
@@ -342,7 +336,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
+    z-index: 0;
 }
 
 .video-overlay {
@@ -351,13 +345,24 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Темный оверлей */
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
-.hero-content {
+.hero-container {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+.hero-photo {
+    max-width: 250px;
+}
+
+/* Для лучшей читаемости текста на видео */
+.hero-section h1, 
+.hero-section h2, 
+.hero-section .lead {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Для лучшей читаемости текста на видео */
@@ -413,4 +418,19 @@
 #contact .social-links a {
     margin-right: 15px;
     margin-bottom: 10px;
+}
+
+/* Анимация появления уведомления */
+.alert {
+    animation: fadeIn 0.3s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Стиль для кнопки с загрузкой */
+#submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }

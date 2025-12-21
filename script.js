@@ -248,3 +248,71 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Получаем элементы формы
+const form = document.getElementById('contactForm');
+const formAlert = document.getElementById('formAlert');
+const submitBtn = document.getElementById('submitBtn');
+const submitText = document.getElementById('submitText');
+const submitSpinner = document.getElementById('submitSpinner');
+
+// Обработчик отправки формы
+form.addEventListener('submit', async function(event) {
+    event.preventDefault(); // Отменяем стандартную отправку
+    
+    // Показываем спиннер загрузки
+    submitText.textContent = 'Отправка...';
+    submitSpinner.style.display = 'inline-block';
+    submitBtn.disabled = true;
+    
+    // Скрываем предыдущее уведомление
+    formAlert.style.display = 'none';
+    
+    try {
+        // Отправляем данные на Formspree
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        // Обрабатываем ответ
+        if (response.ok) {
+            showAlert('Сообщение успешно отправлено! Я скоро с вами свяжусь.', 'success');
+            form.reset(); // Очищаем форму
+        } else {
+            showAlert('Что-то пошло не так. Пожалуйста, попробуйте еще раз или напишите напрямую на email.', 'danger');
+            console.error('Formspree error:', await response.json());
+        }
+    } catch (error) {
+        // Обрабатываем ошибки сети
+        showAlert('Ошибка сети. Проверьте соединение и попробуйте снова.', 'danger');
+        console.error('Network error:', error);
+    } finally {
+        // Восстанавливаем кнопку
+        submitText.textContent = 'Отправить сообщение';
+        submitSpinner.style.display = 'none';
+        submitBtn.disabled = false;
+    }
+});
+
+// Функция для показа уведомлений
+function showAlert(message, type) {
+    formAlert.innerHTML = `
+        <div class="alert alert-${type} alert-dismissible fade show mt-3" role="alert">
+            ${message}
+            <button type="button" class="btn-close" onclick="this.parentElement.parentElement.style.display='none'"></button>
+        </div>
+    `;
+    formAlert.style.display = 'block';
+    
+    // Автоматически скрываем уведомление через 5 секунд (только для успешных)
+    if (type === 'success') {
+        setTimeout(() => {
+            if (formAlert.style.display !== 'none') {
+                formAlert.style.display = 'none';
+            }
+        }, 5000);
+    }
+}
